@@ -1,0 +1,185 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdf8f8;
+  color: #1e3932;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #ffffff;
+  box-shadow: -1px 5px 2px -4px rgba(0, 0, 0, 0.71);
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.header img {
+  max-width: 90px;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: green;
+}
+
+/* ===== BANNERS ===== */
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #dbeee3;
+  border-radius: 12px;
+  margin: 30px auto;
+  max-width: 1100px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.texto,
+.imagem {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.texto {
+  flex-direction: column;
+  text-align: center;
+}
+
+.texto h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.texto p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  max-width: 90%;
+}
+
+.btn {
+  padding: 12px 30px;
+  border: 2px solid #1e3932;
+  background-color: transparent;
+  color: #1e3932;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1e3932;
+  color: white;
+}
+
+.imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+.colunas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.coluna h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.coluna ul {
+  list-style: none;
+  padding: 0;
+}
+
+.coluna ul li {
+  margin-bottom: 8px;
+}
+
+.coluna ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.coluna ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Redes sociais */
+.redes {
+  margin: 30px auto 15px;
+  text-align: center;
+}
+
+.redes a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.redes a:hover {
+  transform: scale(1.1);
+}
+
+/* Links legais */
+.links-legais {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.links-legais a {
+  color: #333;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.links-legais a:hover {
+  text-decoration: underline;
+}
+
+/* Direitos autorais */
+.copy {
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+  margin-top: 10px;
+}
