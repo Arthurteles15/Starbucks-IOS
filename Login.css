@@ -1,130 +1,237 @@
-*{
-    margin: 0%;
-    padding: 0%;
+/* ==============================
+   ESTILO BASE
+============================== */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-image: url(Mocha\ \(ou\ Mocha\ Branco\)_\ Photorealistic\ image\ of\ a\ Starbucks\ hot\ Mocha\ \(or\ White\ Mocha\)\ in\ a\ white\ ceramic\ mug\,\ whipped\ cream\ on\ top\,\ rich\ chocolate\ drizzle\,\ simple\ clean\ background\,\ cozy\ lighting.\ \(1\).jpg);
+
+:root {
+    --cor-fundo: #DDD6C6;
+    --cor-texto: #DDD6C6;
+    --cor-sombra: #493123;
+    --cor-destaque: #3a271c;
+}
+
+body {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("Mocha (ou Mocha Branco)_ Photorealistic image of a Starbucks hot Mocha (or White Mocha) in a white ceramic mug, whipped cream on top, rich chocolate drizzle, simple clean background, cozy lighting. (1).jpg");
     background-size: cover;
+    background-position: center;
     font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-texto);
 }
-main{
-    margin-left: 700px;
-    margin-top: 70px;
-    width: 400px;
+
+/* ==============================
+   CONTAINER PRINCIPAL
+============================== */
+main {
+    width: 90%;
+    max-width: 400px;
     backdrop-filter: blur(10px);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow:9px 17px 27px -3px #3a271c ;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 9px 17px 27px -3px var(--cor-destaque);
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
 }
-h2{
+
+/* ==============================
+   TEXTOS
+============================== */
+h1 {
+    color: var(--cor-fundo);
     text-align: center;
-    margin: 7px;
-    color: #DDD6C6;
+    margin: 10px 0;
 }
-h1{
-    color: #f0e9da;
+
+h2 {
     text-align: center;
-    margin: 7px;
+    color: var(--cor-texto);
+    margin: 5px 0;
 }
-h3{
+
+h3 {
     font-size: 20px;
     color: aliceblue;
-    margin-left: 30px;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin: 30px 0 10px 30px;
 }
 
-.entrar_com{
-    
-    margin-left: 23px;
-    outline: none;
-    border: none;
-    padding: 10px;
-    border-radius: 3px;
-    box-shadow: 0px 13px 11px -3px #493123;
-    cursor: pointer;
-    transition: 0.5s;
-}
-.entrar_com:hover{
-    transform: translateY(-5px);
-    box-shadow: 0px 13px 15px 3px #493123
-}
-.entrar_com img{
-    width: 20px;
-}
-#input{
+/* ==============================
+   BOTÕES E INPUTS
+============================== */
+#input {
     background-color: transparent;
     border: none;
-    width: 350px;
-    margin-left: 20px;
-    height: 30px;
-    box-shadow: 0px 13px 11px -3px #493123;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0px 13px 11px -3px var(--cor-sombra);
     padding-left: 10px;
-    border-radius: 3px;
+    border-radius: 5px;
     outline: solid 1px rgba(114, 117, 121, 0.637);
     transition: 0.4s;
-}
-#input:focus{
-    color: black;
-    background-color: #ddd6c691;
+    color: var(--cor-texto);
 }
 
-#input::placeholder{
-    color: #DDD6C6;
+#input:focus {
+    color: #000;
+    background-color: #ddd6c6b9;
+    box-shadow: 0px 15px 20px -3px #292522a2;;
 }
-.flex-lembrar_cadastro{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
-    font-size: 1em;
+
+#input::placeholder {
+    color: var(--cor-texto);
 }
-#button_enviar{
-    
-    margin-top: 15px;
-    margin-left: 50px;
-    height: 40px;
-    width: 270px;
-    background-color: #DDD6C6;
+
+#button_enviar {
+    margin-top: 20px;
+    height: 45px;
+    width: 100%;
+    background-color: var(--cor-fundo);
     border: none;
     outline: none;
     border-radius: 10px;
-    box-shadow: 0px 13px 11px -3px #493123;
+    box-shadow: 0px 15px 20px -3px #292522a2;
     cursor: pointer;
     transition: 0.5s;
-
+    font-size: 1em;
+    font-weight: 600;
 }
-#button_enviar:hover{
-    transform: translateY(-2px);
-    background-color:#ddd6c63f ;
+
+#button_enviar:hover {
+    transform: translateY(-3px);
+    background-color: #f0e9da;
+    color: var(--cor-destaque);
+    box-shadow: 0px 15px 20px -3px #292522a2;
+}
+
+/* ==============================
+   BOTÕES DE LOGIN SOCIAL
+============================== */
+.entrar_com {
     color: #DDD6C6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    width: 90%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 15px 20px -3px #292522a2;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.1);
+}
 
+.entrar_com:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 20px -3px #3d3733a2;;
 }
-.p_final{
-    margin-top: 20px;
-    text-align: center;
-    
+
+.entrar_com img {
+    width: 20px;
+    margin-right: 10px;
 }
-a{
+
+/* ==============================
+   LINKS E TEXTOS MENORES
+============================== */
+.flex-lembrar_cadastro {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 0.95em;
+}
+
+a {
     text-decoration: none;
+    color: var(--cor-texto);
 }
-a:hover{
+
+a:hover {
     text-decoration: underline;
 }
-p,label{
-    color: #DDD6C6;
-}
-a img{
-    width: 70px;
-    margin-bottom: -90px;
-    margin-left: 50px;
-    margin-top: 30px;
-    transition: 0.5s;
-    background-color: #00000081;
-    border-radius: 1000px;
 
+.p_final {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
 }
-a img:hover{
-    
-    transform: translateY(-5px);
+
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+/* Tablets (telas entre 600px e 900px) */
+@media (max-width: 900px) {
+    main {
+        max-width: 350px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #button_enviar {
+        height: 40px;
+        font-size: 0.95em;
+    }
+
+    .entrar_com {
+        width: 100%;
+    }
+}
+
+/* Celulares (telas menores que 600px) */
+@media (max-width: 600px) {
+    body {
+        background-position: center;
+        background-size: cover;
+        padding: 10px;
+    }
+
+    main {
+        width: 100%;
+        padding: 15px;
+        margin: 30px 0;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1em;
+        margin: 20px 0 10px;
+    }
+
+    #input {
+        font-size: 0.9em;
+    }
+
+    #button_enviar {
+        height: 40px;
+        font-size: 0.9em;
+    }
+
+    .flex-lembrar_cadastro {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    a img {
+        width: 60px;
+    }
 }
