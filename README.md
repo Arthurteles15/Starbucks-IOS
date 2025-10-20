@@ -1,7 +1,9 @@
-# ☕ Starbucks
+# ☕ 丂 ㄒ 卂 尺 乃 ㄩ 匚 Ҝ 丂
 
 Bem-vindo a nossa **Starbucks**, um projeto desenvolvido por um grupo de quatro estudantes apaixonados por tecnologia e design.  
 Nosso objetivo foi criar uma experiência digital mostrando o cardápio e o universo da Starbucks de forma moderna, responsiva e interativa.
+
+![Logo Pulsando](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjJjOGk1NnEwaWV6eGU1aXQ5YmhkNnlwMmI4NDd6NzlxamQ3YmNuaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oPYrWqRG7rzbO/giphy.gif)
 
 ---
 
@@ -92,3 +94,7 @@ Este site foi feito com **muito esforço, trabalho em equipe e amor por tecnolog
 
 👨‍💻 **Desenvolvido pelo grupo de estudantes de Desenvolvimento Web – IOS**  
 > Unindo criatividade, código e café ☕.
+
+}
+
+
