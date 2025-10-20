@@ -1,4 +1,4 @@
-# ☕ 丂 ㄒ 卂 尺 乃 ㄩ 匚 Ҝ 丂
+# ☕ 丂ㄒ卂尺乃ㄩ匚Ҝ丂
 
 Bem-vindo a nossa **Starbucks**, um projeto desenvolvido por um grupo de quatro estudantes apaixonados por tecnologia e design.  
 Nosso objetivo foi criar uma experiência digital mostrando o cardápio e o universo da Starbucks de forma moderna, responsiva e interativa.
