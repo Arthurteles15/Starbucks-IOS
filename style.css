@@ -1,35 +1,39 @@
-/* RESET */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== ESTILO GERAL ===== */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #fdf8f8;
   color: #1e3932;
+  line-height: 1.6;
 }
 
 /* ===== HEADER ===== */
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background-color: #ffffff;
-  box-shadow: -1px 5px 2px -4px rgba(0, 0, 0, 0.71);
-  gap: 20px;
-  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 30px;
+  flex-wrap: wrap; /* permite quebrar em telas menores */
 }
 
 .header img {
-  max-width: 90px;
+  max-width: 80px;
 }
 
 .menu ul {
   display: flex;
   list-style: none;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .menu a {
@@ -120,6 +124,10 @@ body {
   margin: auto;
 }
 
+.coluna {
+  flex: 1 1 200px;
+}
+
 .coluna h3 {
   font-size: 16px;
   margin-bottom: 10px;
@@ -182,4 +190,51 @@ body {
   color: #666;
   font-size: 13px;
   margin-top: 10px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .texto, .imagem {
+    flex: 1 1 100%;
+    padding: 20px;
+  }
+
+  .texto h2 {
+    font-size: 1.6rem;
+  }
+
+  .texto p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    margin: 15px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .colunas {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .coluna {
+    width: 100%;
+  }
 }

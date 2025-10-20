@@ -1,30 +1,37 @@
-/* Reset */
+/* ===== RESET ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ===== BASE ===== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f5f5;
   color: #333;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
-/* Logo no topo esquerdo */
+/* ===== LOGO ===== */
 .logo {
   position: absolute;
   top: 20px;
   left: 20px;
-  width: 50px;
+  width: 60px;
   height: auto;
+  transition: transform 0.3s ease;
 }
 
-/* Conteúdo centralizado */
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
 main {
   flex: 1;
   display: flex;
@@ -32,26 +39,28 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
   width: 100%;
   max-width: 600px;
+  animation: fadeIn 1s ease;
 }
 
-/* Texto de boas-vindas */
+/* ===== TEXTO DE BOAS-VINDAS ===== */
 .welcome {
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-bottom: 10px;
   color: #006241; /* Verde Starbucks */
+  font-weight: bold;
 }
 
-/* Pergunta */
+/* ===== PERGUNTA ===== */
 .question {
   font-size: 1.2rem;
   margin-bottom: 30px;
   color: #555;
 }
 
-/* Campo de input */
+/* ===== INPUT ===== */
 .input-box {
   width: 100%;
   max-width: 400px;
@@ -62,8 +71,67 @@ main {
   background-color: white;
   color: #333;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.input-box:focus {
+  border-color: #006241;
+  box-shadow: 0 0 8px rgba(0, 98, 65, 0.3);
 }
 
 .input-box::placeholder {
   color: #aaa;
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .welcome {
+    font-size: 1.9rem;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+
+  .input-box {
+    max-width: 320px;
+    padding: 12px;
+  }
+
+  .logo {
+    width: 50px;
+    top: 15px;
+    left: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 30px 15px;
+  }
+
+  .welcome {
+    font-size: 1.7rem;
+  }
+
+  .question {
+    font-size: 0.95rem;
+  }
+
+  .input-box {
+    max-width: 280px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    width: 45px;
+  }
 }
